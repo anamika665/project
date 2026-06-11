@@ -37,6 +37,12 @@ CSS3
 Google Fonts
 ______________________________
 
+**Deployment**
+
+VERCEL -https://crochet-website-nine.vercel.app/index.html
+
+________________________________
+
 **🎨 Preview**
 
 This website is designed for crochet businesses, handmade product sellers, and small craft brands looking for an attractive online presence.
