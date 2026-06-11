@@ -5,6 +5,7 @@ A cute and aesthetic crochet-themed website built using HTML and CSS. The websit
 _____________________________
 
 **✨ Features**
+
 🏠 Home Section with scrolling marquee
 🎀 Cute Navigation Bar
 📖 About Section with brand story
@@ -17,10 +18,12 @@ _____________________________
 ____________________________
 
 **🚀 Technologies Used**
+
 HTML5
 CSS3
 Google Fonts
 ______________________________
 
 **🎨 Preview**
+
 This website is designed for crochet businesses, handmade product sellers, and small craft brands looking for an attractive online presence.
