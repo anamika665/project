@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Crochet Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff9f8;
+    color:#5e3b31;
+}
+
+/* Marquee */
+
+.marquee{
+     background:peachpuff; 
+    color:#7a3e2f;
+    padding:12px;
+    font-weight:600;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:5px 8%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo img{
+    height:100px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#7a3e2f;
+    font-weight:600;
+    font-size: 20px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{ 
+    color:rgba(179, 107, 107, 0.938);
+}
+
+.cart{
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Home Section */
+
+.home{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px 8%;
+    gap:40px;
+}
+
+.home-text h1{
+    font-size:65px;
+    color:#9e503a;
+}
+
+.home-text p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+     background:peachpuff; 
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background-color:#7a3e2f;
+}
+
+.home img{
+    width:380px;
+    border-radius:20px;
+}
+
+/* About */
+
+.about{
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.about img{
+    width:350px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-text h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+.about-text p{
+    font-size:20px;
+    font-weight: 20px;
+}
+
+ .products{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color: rgb(156, 70, 70); 
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    width:260px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+.price{
+    color:#ff7b9c;
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.buy-btn{
+    background:peachpuff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+     border-radius:25px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+.button{
+    margin-left: 50%;
+    margin-bottom: 100PX;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#7a3e2f;
+    background:peachpuff; 
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+     cursor:pointer;
+     transition:0.3s;
+
+}
+   
+/* Contact */
+
+.contact{
+    padding:80px 8%;
+    text-align:center;
+     background:peachpuff; 
+    margin-top: 60px;
+}
+
+.contact h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#fff;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.home,
+.about{
+    flex-direction:column;
+    text-align:center;
+}
+
+.home img,
+.about img{
+    width:100%;
+}
+
+.nav-links{
+    gap:15px;
+    font-size:14px;
+}
+
+.home-text h1{
+    font-size:45px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<!-- Marquee -->
+
+<marquee class="marquee">
+🧶 Welcome to The Crochet Hub 💖 Handmade Crochet Creations 🌸 Soft, Cute & Made With Love 🧸✨
+</marquee>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">
+<img src="logo.jpeg" alt="Crochet Logo">
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html"> HOME</a></li>
+<li><a href="about.html"> ABOUT</a></li>
+<li><a href="product.html">CREATIONS</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+
+<div class="cart">
+🛒
+</div>
+
+</nav>
+
+<!-- Home -->
+
+<section class="home" id="home">
+
+<div class="home-text">
+<h1>The Crochet Hub 💕</h1>
+
+<p>
+Handmade crochet creations crafted with love, creativity and a touch of magic. 🌷
+</p>
+
+<a href="product.html" class="btn">🛍️ Shop Now</a>
+
+</div>
+
+<img src="bow.jpeg" alt="Crochet">
+
+</section>
+
+<section class="products" id="products">
+
+<h2 class="section-title">🧶CREATIONS</h2>
+
+<div class="product-container">
+
+<div class="card">
+<img src="evil.jpeg">
+<h3>EVIL EYE</h3>
+<p class="price">₹89</p>
+<button class="buy-btn">DM US TO OREDR</button>
+</div>
+
+
+<div class="card">
+<img src="review.jpeg">
+<h3>SUNFLOWER KEYCHAIN </h3>
+<p class="price">₹79</p>
+<button class="buy-btn">DM US TO ORDER</button>
+</div>
+
+
+
+<div class="card">
+<img src="cherry.jpeg">
+<h3>CHERRY KEYCHAIN</h3>
+<p class="price">₹79</p>
+<button class="buy-btn">DM US TO ORDER</button>
+</div>
+
+</div>
+</section>
+
+
+<a href="product.html" class="button">MORE PRODUCTS</a>
+
+
+<section class="contact" id="contact">
+
+<h2>📞 Contact Us</h2>
+<p>DM US ON INSTAGRAM<br> (the_crochet._.hub)
+</p>
+<p>📍 Jamshedpur, India</p>
+
+</section>
+
+<footer>
+💖 Made with Love | The Crochet Hub 🧶
+</footer>
+
+</body>
+</html>
