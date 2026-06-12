@@ -235,29 +235,324 @@ footer{
     background:#fff;
 }
 
-/* Responsive */
-
-@media(max-width:768px){
-
-.home,
-.about{
-    flex-direction:column;
-    text-align:center;
+@media screen and (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .nav-links {
+        gap: 12px;
+    }
+    
+    .nav-links a {
+        font-size: 13px;
+    }
+    
+    .cart {
+        font-size: 20px;
+    }
+    
+    .home-text h1 {
+        font-size: 32px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .card {
+        max-width: 100%;
+    }
+    
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
 
-.home img,
-.about img{
-    width:100%;
+/* Medium phones (iPhone 6/7/8, Android phones) */
+@media screen and (min-width: 376px) and (max-width: 480px) {
+    .logo img {
+        height: 60px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .home-text h1 {
+        font-size: 36px;
+    }
+    
+    .card {
+        max-width: 100%;
+        width: calc(50% - 20px);
+    }
+    
+    .product-container {
+        gap: 15px;
+    }
 }
 
-.nav-links{
-    gap:15px;
-    font-size:14px;
+/* Large phones (iPhone Plus, Pixel, Galaxy Note) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .home-text h1 {
+        font-size: 42px;
+    }
+    
+    .card {
+        width: calc(33.333% - 20px);
+        max-width: none;
+    }
+    
+    .about-text h2 {
+        font-size: 36px;
+    }
 }
 
-.home-text h1{
-    font-size:45px;
+/* Tablets (iPad, Android tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .home {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .about {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .home-text h1 {
+        font-size: 50px;
+    }
+    
+    .card {
+        width: calc(33.333% - 30px);
+        max-width: none;
+    }
+    
+    .logo img {
+        height: 80px;
+    }
+    
+    nav {
+        padding: 5px 6%;
+    }
 }
+
+/* Desktop and large tablets */
+@media screen and (min-width: 1025px) {
+    .home {
+        flex-direction: row;
+        text-align: left;
+        padding: 80px 8%;
+    }
+    
+    .about {
+        flex-direction: row;
+        text-align: left;
+        padding: 80px 8%;
+    }
+    
+    .home-text h1 {
+        font-size: 65px;
+    }
+    
+    .card {
+        width: 260px;
+    }
+    
+    .logo img {
+        height: 100px;
+    }
+    
+    nav {
+        padding: 5px 8%;
+    }
+}
+
+/* Landscape orientation for phones */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .home {
+        min-height: auto;
+        padding: 20px 5%;
+    }
+    
+    .home img {
+        max-width: 200px;
+    }
+    
+    .about img {
+        max-width: 200px;
+    }
+    
+    .product-container {
+        gap: 15px;
+    }
+}
+
+/* High-resolution displays (Retina) */
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #2c2422;
+        color: #f0e6e3;
+    }
+    
+    nav, footer {
+        background: #3a302e;
+    }
+    
+    .card {
+        background: #4a3e3b;
+    }
+    
+    .nav-links a {
+        color: #f0e6e3;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .marquee {
+        white-space: normal;
+    }
+}
+
+/* Touch-friendly adjustments for mobile */
+@media (hover: none) and (pointer: coarse) {
+    .btn, 
+    .buy-btn, 
+    .button,
+    .nav-links a,
+    .cart {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .btn:active,
+    .buy-btn:active,
+    .button:active {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+    
+    /* Increase touch targets */
+    .nav-links a {
+        padding: 8px 4px;
+        display: inline-block;
+    }
+    
+    .cart {
+        padding: 8px;
+    }
+}
+
+/* Specific iOS adjustments */
+@supports (-webkit-touch-callout: none) {
+    /* iOS specific fixes */
+    body {
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .home, .about {
+        /* Fix for iOS Safari 100vh issue */
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Specific Android adjustments */
+@supports (-webkit-appearance: none) and (not (overflow: -webkit-marquee)) {
+    /* Android Chrome specific fixes */
+    .card {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+/* Foldable devices (Samsung Fold, etc.) */
+@media screen and (min-width: 280px) and (max-width: 450px) and (min-aspect-ratio: 1/2) {
+    .product-container {
+        gap: 12px;
+    }
+    
+    .card h3 {
+        font-size: 14px;
+    }
+    
+    .price {
+        font-size: 14px;
+    }
+}
+
+/* Notebooks and small laptops */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .home, .about {
+        gap: 40px;
+    }
+    
+    .home img, .about img {
+        width: 300px;
+    }
+}
+
+/* Ultra-wide displays */
+@media screen and (min-width: 1920px) {
+    .home, .about, .products, .contact {
+        padding: 80px 15%;
+    }
+    
+    .home-text h1 {
+        font-size: 80px;
+    }
+    
+    .card {
+        width: 300px;
+    }
+    
+    .card img {
+        height: 280px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .marquee,
+    .cart,
+    .btn,
+    .buy-btn,
+    .button,
+    nav {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
 }
 
 </style>
