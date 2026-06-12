@@ -234,304 +234,272 @@ footer{
     padding:20px;
     background:#fff;
 }
+/* ============================================ */
+/* MEDIA QUERIES FOR ALL PHONES (ONLY) */
+/* ============================================ */
 
-@media screen and (max-width: 375px) {
-    body {
-        font-size: 14px;
+/* All phones (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+    
+    /* Fix marquee for phones */
+    .marquee {
+        font-size: 10px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        padding: 8px !important;
+    }
+    
+    /* Fix navigation for phones */
+    nav {
+        padding: 5px 4% !important;
+        flex-direction: column !important;
+        gap: 8px !important;
     }
     
     .logo img {
-        height: 50px;
+        height: 50px !important;
     }
     
     .nav-links {
-        gap: 12px;
+        gap: 12px !important;
+        justify-content: center !important;
     }
     
     .nav-links a {
-        font-size: 13px;
+        font-size: 12px !important;
     }
     
     .cart {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     
-    .home-text h1 {
-        font-size: 32px;
-    }
-    
-    .section-title {
-        font-size: 28px;
-    }
-    
-    .card {
-        max-width: 100%;
-    }
-    
-    .button {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-}
-
-/* Medium phones (iPhone 6/7/8, Android phones) */
-@media screen and (min-width: 376px) and (max-width: 480px) {
-    .logo img {
-        height: 60px;
-    }
-    
-    .nav-links {
-        gap: 15px;
-    }
-    
-    .home-text h1 {
-        font-size: 36px;
-    }
-    
-    .card {
-        max-width: 100%;
-        width: calc(50% - 20px);
-    }
-    
-    .product-container {
-        gap: 15px;
-    }
-}
-
-/* Large phones (iPhone Plus, Pixel, Galaxy Note) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .home-text h1 {
-        font-size: 42px;
-    }
-    
-    .card {
-        width: calc(33.333% - 20px);
-        max-width: none;
-    }
-    
-    .about-text h2 {
-        font-size: 36px;
-    }
-}
-
-/* Tablets (iPad, Android tablets) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Fix home section for phones */
     .home {
-        flex-direction: row;
-        text-align: left;
-    }
-    
-    .about {
-        flex-direction: row;
-        text-align: left;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 30px 4% !important;
+        gap: 20px !important;
     }
     
     .home-text h1 {
-        font-size: 50px;
+        font-size: 32px !important;
     }
     
-    .card {
-        width: calc(33.333% - 30px);
-        max-width: none;
-    }
-    
-    .logo img {
-        height: 80px;
-    }
-    
-    nav {
-        padding: 5px 6%;
-    }
-}
-
-/* Desktop and large tablets */
-@media screen and (min-width: 1025px) {
-    .home {
-        flex-direction: row;
-        text-align: left;
-        padding: 80px 8%;
-    }
-    
-    .about {
-        flex-direction: row;
-        text-align: left;
-        padding: 80px 8%;
-    }
-    
-    .home-text h1 {
-        font-size: 65px;
-    }
-    
-    .card {
-        width: 260px;
-    }
-    
-    .logo img {
-        height: 100px;
-    }
-    
-    nav {
-        padding: 5px 8%;
-    }
-}
-
-/* Landscape orientation for phones */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-    .home {
-        min-height: auto;
-        padding: 20px 5%;
+    .home-text p {
+        font-size: 14px !important;
     }
     
     .home img {
-        max-width: 200px;
+        width: 90% !important;
+        max-width: 280px !important;
+    }
+    
+    /* Fix about section for phones */
+    .about {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 30px 4% !important;
+        gap: 20px !important;
     }
     
     .about img {
-        max-width: 200px;
+        width: 90% !important;
+        max-width: 280px !important;
+    }
+    
+    .about-text h2 {
+        font-size: 28px !important;
+    }
+    
+    .about-text p {
+        font-size: 14px !important;
+    }
+    
+    /* Fix products section for phones */
+    .products {
+        padding: 30px 4% !important;
+    }
+    
+    .section-title {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
     }
     
     .product-container {
-        gap: 15px;
-    }
-}
-
-/* High-resolution displays (Retina) */
-@media screen and (-webkit-min-device-pixel-ratio: 2), 
-       screen and (min-resolution: 192dpi) {
-    .logo img {
-        image-rendering: -webkit-optimize-contrast;
-    }
-}
-
-/* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+        gap: 15px !important;
     }
     
-    .marquee {
-        white-space: normal;
-    }
-}
-
-/* Touch-friendly adjustments for mobile */
-@media (hover: none) and (pointer: coarse) {
-    .btn, 
-    .buy-btn, 
-    .button,
-    .nav-links a,
-    .cart {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    .btn:active,
-    .buy-btn:active,
-    .button:active {
-        opacity: 0.7;
-        transform: scale(0.98);
-    }
-    
-    /* Increase touch targets */
-    .nav-links a {
-        padding: 8px 4px;
-        display: inline-block;
-    }
-    
-    .cart {
-        padding: 8px;
-    }
-}
-
-/* Specific iOS adjustments */
-@supports (-webkit-touch-callout: none) {
-    /* iOS specific fixes */
-    body {
-        -webkit-font-smoothing: antialiased;
-    }
-    
-    .home, .about {
-        /* Fix for iOS Safari 100vh issue */
-        min-height: -webkit-fill-available;
-    }
-}
-
-/* Specific Android adjustments */
-@supports (-webkit-appearance: none) and (not (overflow: -webkit-marquee)) {
-    /* Android Chrome specific fixes */
+    /* Products cards - 2 columns on phones */
     .card {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-}
-
-/* Foldable devices (Samsung Fold, etc.) */
-@media screen and (min-width: 280px) and (max-width: 450px) and (min-aspect-ratio: 1/2) {
-    .product-container {
-        gap: 12px;
-    }
-    
-    .card h3 {
-        font-size: 14px;
-    }
-    
-    .price {
-        font-size: 14px;
-    }
-}
-
-/* Notebooks and small laptops */
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-    .home, .about {
-        gap: 40px;
-    }
-    
-    .home img, .about img {
-        width: 300px;
-    }
-}
-
-/* Ultra-wide displays */
-@media screen and (min-width: 1920px) {
-    .home, .about, .products, .contact {
-        padding: 80px 15%;
-    }
-    
-    .home-text h1 {
-        font-size: 80px;
-    }
-    
-    .card {
-        width: 300px;
+        width: calc(50% - 15px) !important;
+        max-width: 200px !important;
     }
     
     .card img {
-        height: 280px;
+        height: 160px !important;
+    }
+    
+    .card h3 {
+        font-size: 12px !important;
+        margin-top: 8px !important;
+    }
+    
+    .price {
+        font-size: 14px !important;
+        margin: 5px 0 !important;
+    }
+    
+    .buy-btn {
+        padding: 6px 12px !important;
+        font-size: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Fix button */
+    .button {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+        margin: 15px auto !important;
+    }
+    
+    /* Fix contact section for phones */
+    .contact {
+        padding: 30px 4% !important;
+        margin-top: 30px !important;
+    }
+    
+    .contact h2 {
+        font-size: 28px !important;
+    }
+    
+    .contact p {
+        font-size: 14px !important;
+    }
+    
+    /* Fix footer */
+    footer {
+        font-size: 11px !important;
+        padding: 12px !important;
+    }
+    
+    /* Fix review cards for phones */
+    .heading {
+        gap: 15px !important;
+    }
+    
+    .review .card {
+        width: calc(50% - 15px) !important;
+    }
+    
+    /* Fix Instagram card for contact page */
+    .instagram-card {
+        width: 90% !important;
+        padding: 20px 15px !important;
+        margin: 10px auto !important;
+    }
+    
+    .instagram-icon {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .instagram-icon i {
+        font-size: 2rem !important;
+    }
+    
+    .handle {
+        font-size: 1.3rem !important;
+    }
+    
+    .handle i {
+        font-size: 1.1rem !important;
+    }
+    
+    .line {
+        font-size: 0.85rem !important;
+    }
+    
+    .heart-line {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 1rem !important;
+    }
+    
+    /* Contact hero section */
+    .contact-hero h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .sub-line {
+        font-size: 0.9rem !important;
     }
 }
 
-/* Print styles */
-@media print {
-    .marquee,
-    .cart,
-    .btn,
-    .buy-btn,
-    .button,
-    nav {
-        display: none;
+/* Very small phones (iPhone SE, Galaxy Fold) */
+@media only screen and (max-width: 380px) {
+    
+    .logo img {
+        height: 40px !important;
     }
     
-    body {
-        background: white;
-        color: black;
+    .nav-links a {
+        font-size: 10px !important;
+    }
+    
+    .home-text h1 {
+        font-size: 26px !important;
+    }
+    
+    .section-title {
+        font-size: 24px !important;
+    }
+    
+    /* Single column for very small phones */
+    .card {
+        width: 100% !important;
+        max-width: 250px !important;
+    }
+    
+    .review .card {
+        width: 100% !important;
+    }
+    
+    .handle {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Phones in landscape mode */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    
+    .home {
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+    
+    .home img {
+        max-width: 180px !important;
+    }
+    
+    .about {
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+    
+    .about img {
+        max-width: 180px !important;
     }
     
     .card {
-        break-inside: avoid;
-        page-break-inside: avoid;
+        width: calc(33.33% - 15px) !important;
+    }
+    
+    nav {
+        flex-direction: row !important;
+    }
+    
+    .marquee {
+        white-space: nowrap !important;
     }
 }
 

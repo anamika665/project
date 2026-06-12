@@ -224,450 +224,275 @@ footer{
     padding:20px;
     background:#fff;
 }
- /* Small phones (iPhone SE, Galaxy Fold, etc.) - 320px to 375px */
-    @media screen and (max-width: 375px) {
-      body {
-        font-size: 14px;
-      }
+ 
+     /* ============================================ */
+/* MEDIA QUERIES FOR ALL PHONES (ONLY) */
+/* ============================================ */
 
-      .logo img {
-        height: 50px;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a {
-        font-size: 12px;
-      }
-
-      .cart {
-        font-size: 20px;
-      }
-
-      .marquee {
-        font-size: 10px;
-        white-space: normal;
-        text-align: center;
-        line-height: 1.4;
-      }
-
-      .contact-hero h1 {
-        font-size: 1.8rem;
-      }
-
-      .contact-hero h1 i {
-        font-size: 1.6rem;
-      }
-
-      .sub-line {
-        font-size: 0.85rem;
-      }
-
-      .instagram-card {
-        padding: 1.5rem 1rem;
-        margin: 1rem 15px 2rem;
-        border-radius: 32px;
-      }
-
-      .instagram-icon {
-        width: 65px;
-        height: 65px;
-      }
-
-      .instagram-icon i {
-        font-size: 2.5rem;
-      }
-
-      .handle {
-        font-size: 1.4rem;
-      }
-
-      .handle i {
-        font-size: 1.2rem;
-      }
-
-      .line {
-        font-size: 0.85rem;
-        gap: 6px;
-      }
-
-      .line i {
-        width: 20px;
-        font-size: 0.85rem;
-      }
-
-      .heart-line {
-        font-size: 0.75rem;
-        padding: 0.4rem 1rem;
-      }
-
-      .contact h2 {
-        font-size: 26px;
-      }
-
-      .contact p {
-        font-size: 14px;
-      }
-
-      footer {
-        font-size: 12px;
-      }
+/* All phones (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+    
+    /* Fix marquee for phones */
+    .marquee {
+        font-size: 10px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        padding: 8px !important;
     }
-
-    /* Medium phones (iPhone 6/7/8, Android) - 376px to 480px */
-    @media screen and (min-width: 376px) and (max-width: 480px) {
-      .logo img {
-        height: 60px;
-      }
-
-      .nav-links {
-        gap: 15px;
-      }
-
-      .nav-links a {
-        font-size: 14px;
-      }
-
-      .marquee {
-        font-size: 11px;
-        white-space: normal;
-        text-align: center;
-        line-height: 1.4;
-      }
-
-      .contact-hero h1 {
-        font-size: 2rem;
-      }
-
-      .instagram-card {
-        padding: 1.8rem 1.2rem;
-        border-radius: 40px;
-      }
-
-      .handle {
-        font-size: 1.6rem;
-      }
-
-      .line {
-        font-size: 0.9rem;
-      }
-
-      .contact h2 {
-        font-size: 28px;
-      }
+    
+    /* Fix navigation for phones */
+    nav {
+        padding: 5px 4% !important;
+        flex-direction: column !important;
+        gap: 8px !important;
     }
-
-    /* Large phones (iPhone Plus, Pixel, Galaxy Note) - 481px to 768px */
-    @media screen and (min-width: 481px) and (max-width: 768px) {
-      nav {
-        padding: 5px 6%;
-      }
-
-      .logo img {
-        height: 75px;
-      }
-
-      .nav-links a {
-        font-size: 18px;
-      }
-
-      .contact-hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .handle {
-        font-size: 2rem;
-      }
-
-      .instagram-card {
-        max-width: 500px;
-      }
-
-      .line {
-        font-size: 1rem;
-      }
+    
+    .logo img {
+        height: 50px !important;
     }
-
-    /* Tablets (iPad, Android tablets) - 769px to 1024px */
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
-      nav {
-        padding: 5px 6%;
-      }
-
-      .logo img {
-        height: 85px;
-      }
-
-      .nav-links {
-        gap: 30px;
-      }
-
-      .nav-links a {
-        font-size: 18px;
-      }
-
-      .contact-hero {
-        margin: 2rem auto 2.5rem;
-      }
-
-      .contact-hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .instagram-card {
-        max-width: 600px;
-        padding: 2.5rem 2rem;
-      }
-
-      .handle {
-        font-size: 2.2rem;
-      }
-
-      .line {
-        font-size: 1.05rem;
-      }
+    
+    .nav-links {
+        gap: 12px !important;
+        justify-content: center !important;
     }
-
-    /* Desktop and large tablets */
-    @media screen and (min-width: 1025px) {
-      nav {
-        padding: 5px 8%;
-      }
-
-      .logo img {
-        height: 100px;
-      }
-
-      .nav-links {
-        gap: 35px;
-      }
-
-      .nav-links a {
-        font-size: 20px;
-      }
-
-      .cart {
-        font-size: 28px;
-      }
-
-      .contact-hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .contact-hero h1 i {
-        font-size: 2.6rem;
-      }
-
-      .instagram-card {
-        padding: 2.5rem 2rem;
-      }
-
-      .instagram-icon {
-        width: 90px;
-        height: 90px;
-      }
-
-      .instagram-icon i {
-        font-size: 3.6rem;
-      }
-
-      .contact h2 {
-        font-size: 45px;
-      }
+    
+    .nav-links a {
+        font-size: 12px !important;
     }
-
-    /* Landscape orientation for phones */
-    @media screen and (max-width: 768px) and (orientation: landscape) {
-      .marquee {
-        white-space: nowrap;
-        font-size: 12px;
-      }
-
-      nav {
-        padding: 3px 5%;
-      }
-
-      .logo img {
-        height: 45px;
-      }
-
-      .contact-hero {
-        margin: 1rem auto;
-      }
-
-      .instagram-card {
-        margin: 0.5rem auto 1.5rem;
-        padding: 1rem 1.5rem;
-      }
-
-      .instagram-icon {
-        width: 55px;
-        height: 55px;
-      }
-
-      .instagram-icon i {
-        font-size: 2rem;
-      }
-
-      .handle {
-        font-size: 1.3rem;
-      }
-
-      .short-lines {
-        margin-top: 0.8rem;
-      }
-
-      .line {
-        margin: 0.4rem 0;
-        font-size: 0.8rem;
-      }
+    
+    .cart {
+        font-size: 20px !important;
     }
-
-    /* Foldable devices (Samsung Fold, Surface Duo) */
-    @media screen and (min-width: 280px) and (max-width: 450px) and (min-aspect-ratio: 1/2) {
-      .marquee {
-        white-space: normal;
-        line-height: 1.3;
-      }
-
-      .handle {
-        font-size: 1.2rem;
-      }
-
-      .line {
-        font-size: 0.75rem;
-      }
+    
+    /* Fix home section for phones */
+    .home {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 30px 4% !important;
+        gap: 20px !important;
     }
-
-    /* High-resolution displays (Retina) */
-    @media screen and (-webkit-min-device-pixel-ratio: 2),
-           screen and (min-resolution: 192dpi) {
-      .logo img {
-        image-rendering: -webkit-optimize-contrast;
-      }
-      
-      .instagram-icon i {
-        -webkit-font-smoothing: antialiased;
-      }
+    
+    .home-text h1 {
+        font-size: 32px !important;
     }
-
-
-
-    /* Reduced motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-
-      .marquee {
-        white-space: normal;
-      }
-
-      .instagram-card:hover {
-        transform: none;
-      }
+    
+    .home-text p {
+        font-size: 14px !important;
     }
-
-    /* Touch-friendly adjustments for mobile */
-    @media (hover: none) and (pointer: coarse) {
-      .nav-links a,
-      .cart,
-      .handle a,
-      .instagram-card {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .nav-links a:active,
-      .cart:active {
-        opacity: 0.7;
-      }
-
-      /* Increase touch targets */
-      .nav-links a {
-        padding: 8px 6px;
-        display: inline-block;
-      }
-
-      .cart {
-        padding: 8px;
-      }
-
-      .handle a {
-        padding: 5px 8px;
-        display: inline-block;
-      }
+    
+    .home img {
+        width: 90% !important;
+        max-width: 280px !important;
     }
-
-    /* Specific iOS adjustments */
-    @supports (-webkit-touch-callout: none) {
-      body {
-        -webkit-font-smoothing: antialiased;
-      }
-
-      .instagram-card {
-        /* Fix for iOS Safari */
-        -webkit-backdrop-filter: blur(0);
-        backdrop-filter: blur(0);
-      }
+    
+    /* Fix about section for phones */
+    .about {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 30px 4% !important;
+        gap: 20px !important;
     }
-
-    /* Specific Android adjustments */
-    @supports (-webkit-appearance: none) and (not (overflow: -webkit-marquee)) {
-      .instagram-card {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-      }
+    
+    .about img {
+        width: 90% !important;
+        max-width: 280px !important;
     }
-
-    /* Notch/cutout support for modern phones */
-    @supports (padding: max(0px)) {
-      .contact-hero {
-        padding-left: max(20px, env(safe-area-inset-left));
-        padding-right: max(20px, env(safe-area-inset-right));
-      }
-      
-      .instagram-card {
-        margin-left: max(20px, env(safe-area-inset-left));
-        margin-right: max(20px, env(safe-area-inset-right));
-      }
+    
+    .about-text h2 {
+        font-size: 28px !important;
     }
-
-    /* Print styles */
-    @media print {
-      .marquee,
-      .cart,
-      nav {
-        display: none;
-      }
-
-      body {
-        background: white;
-        color: black;
-      }
-
-      .instagram-card {
-        box-shadow: none;
-        border: 1px solid #ccc;
-      }
-
-      .contact {
-        background: none;
-      }
+    
+    .about-text p {
+        font-size: 14px !important;
     }
+    
+    /* Fix products section for phones */
+    .products {
+        padding: 30px 4% !important;
+    }
+    
+    .section-title {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .product-container {
+        gap: 15px !important;
+    }
+    
+    /* Products cards - 2 columns on phones */
+    .card {
+        width: calc(50% - 15px) !important;
+        max-width: 200px !important;
+    }
+    
+    .card img {
+        height: 160px !important;
+    }
+    
+    .card h3 {
+        font-size: 12px !important;
+        margin-top: 8px !important;
+    }
+    
+    .price {
+        font-size: 14px !important;
+        margin: 5px 0 !important;
+    }
+    
+    .buy-btn {
+        padding: 6px 12px !important;
+        font-size: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Fix button */
+    .button {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+        margin: 15px auto !important;
+    }
+    
+    /* Fix contact section for phones */
+    .contact {
+        padding: 30px 4% !important;
+        margin-top: 30px !important;
+    }
+    
+    .contact h2 {
+        font-size: 28px !important;
+    }
+    
+    .contact p {
+        font-size: 14px !important;
+    }
+    
+    /* Fix footer */
+    footer {
+        font-size: 11px !important;
+        padding: 12px !important;
+    }
+    
+    /* Fix review cards for phones */
+    .heading {
+        gap: 15px !important;
+    }
+    
+    .review .card {
+        width: calc(50% - 15px) !important;
+    }
+    
+    /* Fix Instagram card for contact page */
+    .instagram-card {
+        width: 90% !important;
+        padding: 20px 15px !important;
+        margin: 10px auto !important;
+    }
+    
+    .instagram-icon {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .instagram-icon i {
+        font-size: 2rem !important;
+    }
+    
+    .handle {
+        font-size: 1.3rem !important;
+    }
+    
+    .handle i {
+        font-size: 1.1rem !important;
+    }
+    
+    .line {
+        font-size: 0.85rem !important;
+    }
+    
+    .heart-line {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 1rem !important;
+    }
+    
+    /* Contact hero section */
+    .contact-hero h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .sub-line {
+        font-size: 0.9rem !important;
+    }
+}
 
-    /* crafty details */
-    .crochet-hook-icon {
-      display: inline-block;
+/* Very small phones (iPhone SE, Galaxy Fold) */
+@media only screen and (max-width: 380px) {
+    
+    .logo img {
+        height: 40px !important;
     }
-    a {
-      text-decoration: none;
+    
+    .nav-links a {
+        font-size: 10px !important;
     }
+    
+    .home-text h1 {
+        font-size: 26px !important;
+    }
+    
+    .section-title {
+        font-size: 24px !important;
+    }
+    
+    /* Single column for very small phones */
+    .card {
+        width: 100% !important;
+        max-width: 250px !important;
+    }
+    
+    .review .card {
+        width: 100% !important;
+    }
+    
+    .handle {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Phones in landscape mode */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    
+    .home {
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+    
+    .home img {
+        max-width: 180px !important;
+    }
+    
+    .about {
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+    
+    .about img {
+        max-width: 180px !important;
+    }
+    
+    .card {
+        width: calc(33.33% - 15px) !important;
+    }
+    
+    nav {
+        flex-direction: row !important;
+    }
+    
+    .marquee {
+        white-space: nowrap !important;
+    }
+}
   </style>
 </head>
 <body>
